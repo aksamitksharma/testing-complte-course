@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Application from './Components/Application/Application';
+import Counter from './Components/Counter/Counter';
+import UseComp from './Components/ErrorBoundary/UseComp';
+import ApiCalling from './Components/LinksImage/ApiCalling';
+import LinkImage from './Components/LinksImage/LinksImage';
+import Login from './Components/Login/Login';
+import Users from './Components/Users/Users';
+
 
 function App() {
+  
+    let apiUrl = "https://jsonplaceholder.typicode.com/users"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+<ApiCalling apiUrl={apiUrl}/>                   
+      {/* <div>
+        <LinkImage />
+      </div>
+      <Application />
+      <Login />
+      <Counter />
+
+<UseComp /> */}
+
+      <Users />
+    </>
   );
 }
 
